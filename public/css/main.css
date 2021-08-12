@@ -1,0 +1,50 @@
+body {
+    font-family: Helvetica;
+    font-size: 0.9rem;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 12px;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.input{
+    width:20%;
+}
+
+.button {
+    appearance:none;
+    -webkit-appearance:none;
+    padding:5px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:25%;
+  }
