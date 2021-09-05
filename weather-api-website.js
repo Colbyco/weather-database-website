@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
-const { Parser } = require('json2csv');
 const weatherRepo = require('./weather-repository');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -32,12 +31,9 @@ app.post('/', (req, res) => {
                 humidity: response.data.main.humidity,
                 timestamp: new Date(response.data.dt * 1000).toString(),
             };
-            //const json2csvParser = new Parser();
-            //const csv = json2csvParser.parse(record);
-            //res.setHeader('Content-disposition', 'attachment; filename=data.csv');
             await weatherRepo.addWeatherData(record);
             const allWeatherData = await weatherRepo.getAllWeatherData();
-            return res.render('index', {data: allWeatherData, cityName});//.send(csv);
+            return res.render('index', {data: allWeatherData, cityName});
         })
         .catch(function (error) {
             // handle error

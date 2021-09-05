@@ -3,13 +3,13 @@ exports.up = function(knex) {
     return knex.raw(`
         CREATE TABLE weather_data (
            city_name text,
-           weather_conditions text,
-           temp int,
-           feels_like real,
-           temp_min real,
-           temp_max real,
-           pressure int,
-           humidity int
+           weather_conditions varchar(50),
+           temp float,
+           feels_like float,
+           temp_min float,
+           temp_max float,
+           pressure float,
+           humidity float
         )
     `);
 };

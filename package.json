@@ -2,9 +2,10 @@
   "name": "weather-report-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "weather-api-website.js",
   "scripts": {
-    "serve": "nodemon weather-api-website.js"
+    "serve": "nodemon weather-api-website.js",
+    "heroku-postbuild": "knex migrate:latest"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +16,8 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "json2csv": "^5.0.6",
     "knex": "^0.95.6",
     "nodemon": "^2.0.7",
-    "sqlite3": "^5.0.2"
+    "pg": "^8.7.1"
   }
 }

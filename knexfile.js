@@ -1,7 +1,6 @@
+require('dotenv').config();
 module.exports = {
-  client: 'sqlite3',
-  connection: {
-    filename: './data/weather.db3'
-  },
-  useNullAsDefault: true
+  client: 'pg',
+  connection: process.env.DATABASE_URL,
+  searchPath: ['public'],
 };
