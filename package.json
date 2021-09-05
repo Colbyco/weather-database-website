@@ -5,7 +5,8 @@
   "main": "weather-api-website.js",
   "scripts": {
     "serve": "nodemon weather-api-website.js",
-    "heroku-postbuild": "knex migrate:latest"
+    "heroku-postbuild": "knex migrate:latest",
+    "start": "node weather-api-website.js"
   },
   "author": "",
   "license": "ISC",
