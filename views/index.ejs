@@ -41,7 +41,7 @@
                         <td><%= data[i].temp_max %>° F</td>
                         <td><%= data[i].pressure %> hPa</td>
                         <td><%= data[i].humidity %>%</td>
-                        <td><%= data[i].ts %></td>
+                        <td><%= data[i].ts.toLocaleString('en-US') %> UTC</td>
                     </tr>
                 <% } %>
             </table>
