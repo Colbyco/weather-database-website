@@ -29,7 +29,7 @@ app.post('/', (req, res) => {
                 temp_max: response.data.main.temp_max,
                 pressure: response.data.main.pressure,
                 humidity: response.data.main.humidity,
-                timestamp: new Date(response.data.dt * 1000).toString(),
+                ts: new Date(),
             };
             await weatherRepo.addWeatherData(record);
             const allWeatherData = await weatherRepo.getAllWeatherData();

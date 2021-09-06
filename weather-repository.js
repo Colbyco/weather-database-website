@@ -5,7 +5,7 @@ async function addWeatherData(record) {
 }
 
 async function getAllWeatherData(){
-   return await db('weather_data').select().limit(20).orderBy('timestamp', 'DESC');
+   return await db('weather_data').select().whereRaw("ts > current_timestamp - INTERVAL '1 hour'").limit(20).orderBy('ts', 'DESC');
 }
 
 module.exports = {

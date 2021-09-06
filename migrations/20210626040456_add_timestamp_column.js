@@ -1,7 +1,7 @@
 exports.up = function(knex) {
     return knex.raw(`
         ALTER TABLE weather_data
-        ADD timestamp text
+        ADD ts timestamptz
     `);
 };
 
